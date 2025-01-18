@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    
+}
