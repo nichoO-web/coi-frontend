@@ -40,7 +40,7 @@ const App = () => {
         { user ? (
             <>
                 <Route path="/" element={<Contacts user={user} contacts={contacts} handleDeleteContact={handleDeleteContact}/>} />
-                <Route path="/create" element={<CreateContact />} />
+                <Route path="/create" element={<CreateContact contacts={ contacts } setContacts={ setContacts }/>} />
                 <Route path="/contacts/:contactId" element={<ShowContact />} />
                 <Route path="/contacts/:contactId/edit" element={<CreateContact />}/>
             </>

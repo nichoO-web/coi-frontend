@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import * as contactService from '../../services/contactService';
 
-const CreateContact = (props, { contacts, setContacts }) => {
+const CreateContact = ({ contacts, setContacts }) => {
   const { contactId } = useParams();
 
   const [formData, setFormData] = useState({
@@ -31,7 +31,7 @@ const CreateContact = (props, { contacts, setContacts }) => {
 
   const handleUpdateContact = async (contactId, contactFormData) => {
     const updatedContact = await contactService.update(contactId, contactFormData);
-    setContacts(contacts.map((contact) => (contactId === contact._id ? updatedContact : contact)));
+    setContacts(contacts && contacts.map((contact) => (contactId === contact._id ? updatedContact : contact)));
   }
 
   const handleChange = (e) => {
