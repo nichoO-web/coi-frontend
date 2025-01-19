@@ -27,6 +27,7 @@ const SigninForm = (props) => {
             navigate('/');
         } catch (err) {
             updateMessage(err.message);
+            console.log(err)
         }
     };
 
@@ -36,7 +37,7 @@ const SigninForm = (props) => {
           <p>{message}</p>
           <form autoComplete="off" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="email">Username:</label>
+              <label htmlFor="username">Username:</label>
               <input
                 type="text"
                 autoComplete="off"

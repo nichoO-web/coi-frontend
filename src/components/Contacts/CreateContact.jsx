@@ -31,7 +31,7 @@ const CreateContact = ({ contacts, setContacts }) => {
 
   const handleUpdateContact = async (contactId, contactFormData) => {
     const updatedContact = await contactService.update(contactId, contactFormData);
-    setContacts(contacts && contacts.map((contact) => (contactId === contact._id ? updatedContact : contact)));
+    setContacts(contacts.map((contact) => (contactId === contact._id ? updatedContact : contact)));
   }
 
   const handleChange = (e) => {
