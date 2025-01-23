@@ -6,4 +6,21 @@ COI is an application designed to allow companies(ideally in sales i.e. real est
 
 # Getting Started:
 
-Click [here]()
+Click [here](https://circleofinfluence.netlify.app/) to check out the App! You can also check out the planning materials for this app by clicking [here](https://trello.com/b/JjFpLHqc/coi)
+
+# Attributions:
+* [npm](https://www.npmjs.com/)
+
+# Technologies: 
+
+* Mongoose
+* Express
+* React
+* Node.js
+* JavaScript
+* JSON
+
+# Next Steps:
+
+* Link contact information
+* imrpove CSS
