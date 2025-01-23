@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import * as authService from '../../services/authService';
+import '../../App.css'
 
 const SigninForm = (props) => {
     const navigate = useNavigate();
@@ -32,11 +33,11 @@ const SigninForm = (props) => {
     };
 
     return (
-        <main>
-          <h1>Log In</h1>
+        <main className="signin-form">
+          <h1>Sign In</h1>
           <p>{message}</p>
           <form autoComplete="off" onSubmit={handleSubmit}>
-            <div>
+            <div className="username">
               <label htmlFor="username">Username:</label>
               <input
                 type="text"
@@ -47,7 +48,7 @@ const SigninForm = (props) => {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="password">
               <label htmlFor="password">Password:</label>
               <input
                 type="password"
@@ -58,8 +59,8 @@ const SigninForm = (props) => {
                 onChange={handleChange}
               />
             </div>
-            <div>
-              <button>Log In</button>
+            <div className="submit-signin">
+              <button className="signin-button">Sign In</button>
               <Link to="/">
                 <button>Cancel</button>
               </Link>

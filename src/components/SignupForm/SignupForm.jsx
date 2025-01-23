@@ -37,11 +37,11 @@ const SignupForm = (props) => {
     };
 
     return (
-        <main>
+        <main className="signin-form">
             <h1>Sign Up</h1>
             <p>{message}</p>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className="username">
                     <label htmlFor="username">Username:</label>
                     <input 
                       type="text"
@@ -51,7 +51,7 @@ const SignupForm = (props) => {
                       onChange={handleChange} 
                     />
                 </div>
-                <div>
+                <div className="password">
                     <label htmlFor="password">Password:</label>
                     <input 
                       type="password"
@@ -61,7 +61,7 @@ const SignupForm = (props) => {
                       onChange={handleChange} 
                     />
                 </div>
-                <div>
+                <div className="confirm-password">
                     <label htmlFor="confirm">Confirm Password:</label>
                     <input 
                       type="password"
@@ -71,8 +71,8 @@ const SignupForm = (props) => {
                       onChange={handleChange} 
                     />
                 </div>
-                <div>
-                    <button disabled={isFormValid()}>Sign Up</button>
+                <div className="submit-signin">
+                    <button disabled={isFormValid()} className="signin-button">Sign Up</button>
                     <Link to='/'>
                       <button>Cancel</button>
                     </Link>

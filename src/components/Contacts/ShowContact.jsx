@@ -18,20 +18,24 @@ const ShowContact = (props) => {
   if (!contact) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className='show-page'>
       <h1>Contact Details</h1>
       <p>Name: {contact.name}</p>
       <p>Email: {contact.email}</p>
       <p>Phone: {contact.phone}</p>
       <p>Occupation: {contact.occupation}</p>
-      <p>Details:</p>
-      <ul>
-        {contact.details.split('\n').map((detail, index) => (
-          <li key={index}>{detail}</li>
-        ))}
-      </ul>
-      <Link to={`/contacts/${contactId}/edit`}>Edit</Link>
-      <button onClick={() => navigate('/')}>Back</button>
+      <div className='details'>
+        <p>Details:</p>
+        <ul>
+          {contact.details.split('\n').map((detail, index) => (
+            <li key={index}>{detail}</li>
+          ))}
+        </ul>
+      </div>
+      <div className='submit-edit'>
+        <Link to={`/contacts/${contactId}/edit`} className='edit-button'><button>Edit</button></Link>
+        <button onClick={() => navigate('/')}>Back</button>
+      </div>
     </div>
   );
 };

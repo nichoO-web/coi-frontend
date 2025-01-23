@@ -1,26 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { deleteContact } from '../../services/contactService';
 
 const Contacts = ({ contacts, handleDeleteContact }) => {
   const [activeTab, setActiveTab] = useState('Resources');
-  // const [contacts, setContacts] = useState([]);
-
-  // const handleDeleteContact = async (contactId) => {
-  //   await deleteContact(contactId);
-  //   setContacts(contacts.filter((contact) => contact._id !== contactId));
-  // };
-
   const filteredContacts = contacts.filter(
     (contact) => contact.category === activeTab
   );
 
   return (
-    <div>
+    <div className='contacts-container'>
+      <Link to="/create" className='new-contact'><button>New Contact</button></Link>
       <h1>Contacts</h1>
-      <Link to="/create">Create New Contact</Link>
-
-      <div>
+      <div className='tabs'>
         {['Resources', 'Team', 'Clients', 'Hot Leads'].map((tab) => (
           <button
             key={tab}
@@ -34,11 +25,11 @@ const Contacts = ({ contacts, handleDeleteContact }) => {
 
       <ul>
         {filteredContacts.map((contact) => (
-          <li key={contact._id}>
-            <p>Name: {contact.name}</p>
-            <p>Email: {contact.email}</p>
-            <p>Phone: {contact.phone}</p>
-            <p>Occupation: {contact.occupation}</p>
+          <li key={contact._id} className='contacts-list'>
+            <p>Name: <br /> {contact.name}</p>
+            <p>Email: <br /> {contact.email}</p>
+            <p>Phone: <br /> {contact.phone}</p>
+            <p>Occupation: <br /> {contact.occupation}</p>
             <Link to={`/contacts/${contact._id}`}>Details</Link>
             <button onClick={() => handleDeleteContact(contact._id)}>Delete</button>
           </li>

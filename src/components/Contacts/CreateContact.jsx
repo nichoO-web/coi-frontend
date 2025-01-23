@@ -52,9 +52,9 @@ const CreateContact = ({ contacts, setContacts }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='create-form'>
       <h1>{contactId ? 'Edit Contact' : 'New Contact'}</h1>  
-      <label>
+      <label className='category'>
         Category:
         <select name="category" value={formData.category} onChange={handleChange}>
           <option value="Resources">Resources</option>
@@ -63,19 +63,19 @@ const CreateContact = ({ contacts, setContacts }) => {
           <option value="Hot Leads">Hot Leads</option>
         </select>
       </label>
-      <label>
+      <label className='name'>
         Name:
         <input type="text" name="name" value={formData.name} onChange={handleChange} />
       </label>
-      <label>
+      <label className='email'>
         Email:
         <input type="email" name="email" value={formData.email} onChange={handleChange} />
       </label>
-      <label>
+      <label className='phone'>
         Phone:
         <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
       </label>
-      <label>
+      <label className='occupation'>
         Occupation:
         <input
           type="text"
@@ -84,7 +84,7 @@ const CreateContact = ({ contacts, setContacts }) => {
           onChange={handleChange}
         />
       </label>
-      <label>
+      <label className='details'>
         Details:
         <textarea
           name="details"
@@ -92,8 +92,10 @@ const CreateContact = ({ contacts, setContacts }) => {
           onChange={handleChange}
         ></textarea>
       </label>
-      <button type="submit">{contactId ? 'Edit Contact' : 'Create Contact'}</button>
-      <button type="button" onClick={() => navigate('/')}>Cancel</button>
+      <div className='submit-create'>
+        <button type="submit" className='create-button'>{contactId ? 'Edit Contact' : 'Create Contact'}</button>
+        <button type="button" onClick={() => navigate('/')}>Cancel</button>
+      </div>
     </form>
   );
 };

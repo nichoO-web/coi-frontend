@@ -1,4 +1,4 @@
-![Coi Logo](https://mail.google.com/mail/u/0?ui=2&ik=6b0636c399&attid=0.1&permmsgid=msg-a:r-362610345175765074&th=1947bf5894e3d5b6&view=fimg&fur=ip&permmsgid=msg-a:r-362610345175765074&sz=s0-l75-ft&attbid=ANGjdJ99ayevAfrB3MilSod1nnO7uzhKPgG8syS1TNHFmlk1NR58uGK_gqRTEzl6O0nPFPNOoRJYzdevi3YxtIA9rzhmrldnV9yV3s-zuiAWU1-PN1lLBCYV70aGjT0&disp=emb&realattid=ii_m62voytl0&zw)
+![Coi Logo](https://mail.google.com/mail/u/0?ui=2&ik=6b0636c399&attid=0.1&permmsgid=msg-a:r3558011625463794216&th=1948fad7f206a330&view=fimg&fur=ip&permmsgid=msg-a:r3558011625463794216&sz=s0-l75-ft&attbid=ANGjdJ8AjjQ8KMxFRnvM4kOrRiDle-fKUhwzE-lMkJg6aCkrGWKvDX4fRnMC1no4D9xyo7HLE_akwZ6pZxw0vPINTdvTvDkM7GV6_W6e65spnH-lGrdHFkvC0mE83SI&disp=emb&realattid=4FB15A51-4003-4A37-80C9-8C76C6D4166E&zw)
 
 # COI - Circle Of Influence
 

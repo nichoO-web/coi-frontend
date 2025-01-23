@@ -5,15 +5,14 @@ const NavBar = ({ user, handleSignout }) => {
       <>
       <div className="NavBar">
         { user ? (
-          <nav>
-              <Link to='/'>Home</Link>
-              <Link to='' onClick={handleSignout}>Sign Out</Link>
+          <nav className="signout">
+              <Link to='' onClick={handleSignout}><button>Sign Out</button></Link>
           </nav>
         ) : (
           <nav>
             <div className="nav-links">
-              <Link to='/signin'>Sign In</Link>
-              <Link to='/signup'>Sign Up</Link>
+              <Link to='/signin' className="signin-link"><button>Sign in</button></Link>
+              <Link to='/signup' className="signup-link"><button>Sign Up</button></Link>
             </div>
           </nav>
         )}
